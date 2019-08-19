@@ -1,0 +1,29 @@
+GET http://localhost:3000/recepts
+
+###
+
+GET http://localhost:3000/recepts/5d5a5c65a1177104ec71139c
+
+###
+
+POST http://localhost:3000/recepts
+Content-Type: application/json
+
+{
+    "name": "Best Cake",
+    "ingredients": ["apple","grape"]
+}
+
+###
+
+DELETE http://localhost:3000/recepts/5d5a5e30e2c21332146426fb
+
+###
+
+PATCH http://localhost:3000/recepts/5d5a5e30e2c21332146426fb
+Content-Type: application/json
+
+{
+    "name": "Best One",
+    "ingredients": ["apple","banana"]
+}
