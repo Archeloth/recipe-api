@@ -10,8 +10,9 @@ POST http://localhost:3000/recepts
 Content-Type: application/json
 
 {
-    "name": "Best Cake",
-    "ingredients": ["apple","grape"]
+    "name": "Third Best Cake",
+    "ingredients": ["strawberry","kiwi"],
+    "owner": "Barna"
 }
 
 ###
