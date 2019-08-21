@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 const recept = require('../models/recept');
 
+//Config to enable CORS
+router.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
+
 //GET ALL
 router.get('/', async (req,res) => {
     try{
