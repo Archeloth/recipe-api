@@ -1,8 +1,8 @@
-GET https://public-recepy-api.herokuapp.com/
+GET http://localhost:3000/recepts
 
 ###
 
-GET http://localhost:3000/recepts/5d5a5c65a1177104ec71139c
+GET http://localhost:3000/recepts/5d5cf4be4f03822d1822e86a
 
 ###
 
@@ -10,9 +10,8 @@ POST http://localhost:3000/recepts
 Content-Type: application/json
 
 {
-    "name": "Third Best Cake",
-    "ingredients": ["strawberry","kiwi"],
-    "owner": "Barna"
+    "name": "Cake",
+    "ingredients": ["strawberry","kiwi"]
 }
 
 ###
@@ -28,3 +27,7 @@ Content-Type: application/json
     "name": "Best One",
     "ingredients": ["apple","banana"]
 }
+
+###
+
+GET http://localhost:3000/recepts/search/Second

@@ -25,6 +25,16 @@ router.get('/:id', getRecepy, (req,res) => {
     res.send(res.recepy.name)
 });
 
+//SEACH BY NAME
+router.get('/search/:s', async (req,res) => {
+    try{
+        let recepts = await recept.find({ name: new RegExp(req.params.s,'i')});
+        res.json(recepts);
+    }catch (err){
+        res.status(500).json({message: err.message});
+    }
+});
+
 //CREATE ONE
 router.post('/', async (req,res) => {
     const recepy = new recept({

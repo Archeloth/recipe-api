@@ -11,12 +11,10 @@ const receptSchema = new mongoose.Schema({
     },
     owner: {
         type: String,
-        required: true,
         default: 'anonymus'
     },
     creationDate: {
         type: Date,
-        required: true,
         default: Date.now
     }
 })
