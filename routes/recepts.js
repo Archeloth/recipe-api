@@ -28,9 +28,11 @@ router.get('/:id', getRecepy, (req,res) => {
 //SEACH BY NAME
 router.get('/search/:s', async (req,res) => {
     try{
-        if(req.params.s !== ""){
+        if(req.params.s !== "" || req.params.s !== undefined){
             let recepts = await recept.find({ name: new RegExp(req.params.s,'i')});
             res.json(recepts);
+        } else {
+            res.status(400).json({message: "Incorrect search field."})
         }
     }catch (err){
         res.status(500).json({message: err.message});
